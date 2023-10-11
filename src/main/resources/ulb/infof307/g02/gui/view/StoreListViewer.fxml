@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderpane" prefHeight="800.0" prefWidth="1280.0" styleClass="background" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ulb.infof307.g02.gui.view.store.StoreListViewerController">
+    <top>
+        <Label text="Liste des magasins" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="24.0" />
+            </font>
+            <padding>
+                <Insets top="20.0" />
+            </padding>
+        </Label>
+    </top>
+    <center>
+        <VBox alignment="CENTER" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0" VBox.vgrow="ALWAYS">
+                <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                    <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonOnClicked" text="Retour"/>
+                </HBox>
+                <Button fx:id="createButton" mnemonicParsing="false" onAction="#createButtonOnClicked" text="Cr&#233;er" />
+            </HBox>
+            <ScrollPane fx:id="scrollpane" hbarPolicy="NEVER" maxWidth="700.0" prefHeight="650.0" prefWidth="600.0">
+                <VBox fx:id="vbox" spacing="10.0" />
+            </ScrollPane>
+        </VBox>
+    </center>
+</BorderPane>

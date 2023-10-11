@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="397.0" prefWidth="596.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ulb.infof307.g02.gui.view.schedule.CalendarViewerController">
+    <children>
+        <VBox alignment="CENTER" layoutX="248.0" layoutY="99.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox>
+                    <children>
+                        <Button id="leftButtonWithImage" fx:id="backToPreviousMonth" mnemonicParsing="false" onAction="#backToPreviousMonthOnCLicked" prefHeight="30.0" prefWidth="30.0" text="&lt;" />
+                        <Label fx:id="monthYear" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" HBox.hgrow="ALWAYS" />
+                        <Button id="rightButtonWithImage" fx:id="goToNextMonth" mnemonicParsing="false" onAction="#goToNextMonthOnClicked" prefHeight="30.0" prefWidth="30.0" text="&gt;" />
+                    </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+                </HBox>
+                <GridPane fx:id="gridpane" gridLinesVisible="true" VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Lundi" GridPane.halignment="CENTER" />
+                        <Label text="Mardi" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                        <Label text="Mercredi" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                        <Label text="Jeudi" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+                        <Label text="Vendredi" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+                        <Label text="Samedi" GridPane.columnIndex="5" GridPane.halignment="CENTER" />
+                        <Label text="Dimanche" GridPane.columnIndex="6" GridPane.halignment="CENTER" />
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children></Pane>
+                  <Pane layoutX="10.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="92.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="92.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="92.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="92.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="92.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="92.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="92.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="145.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="145.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="145.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="145.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="145.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="145.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="145.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="145.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="145.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="145.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="145.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="95.0" layoutY="145.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="197.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="197.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="197.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="197.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="197.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="197.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="197.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="197.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="197.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="197.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="197.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="197.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="197.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="197.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Date" />
+                     </children>
+                  </Pane>
+                    </children>
+                </GridPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

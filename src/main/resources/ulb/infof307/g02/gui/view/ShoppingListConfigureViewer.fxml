@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderpane" prefHeight="800.0" prefWidth="1280.0" styleClass="background" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml" fx:controller="ulb.infof307.g02.gui.view.shoppinglist.ShoppingListConfigureViewerController">
+   <top>
+      <Label alignment="BOTTOM_CENTER" text="Configuration d'une liste de courses" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </Label>
+   </top>
+   <center>
+      <VBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <HBox alignment="CENTER">
+            <HBox alignment="CENTER" spacing="10.0">
+               <Label text="Nom: " />
+               <TextField fx:id="shoppinglistName" prefHeight="25.0" prefWidth="325.0" />
+               <Label fx:id="shoppinglistNameWarning" prefHeight="17.0" prefWidth="325.0" textFill="RED" />
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0" HBox.hgrow="ALWAYS">
+               <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonOnClicked" stylesheets="@../css/style.css" text="Retour" />
+               <Button fx:id="saveButton" disable="true" mnemonicParsing="false" onAction="#saveButtonOnClicked" stylesheets="@../css/style.css" text="Enregistrer" />
+            </HBox>
+         </HBox>
+         <HBox alignment="CENTER" spacing="10.0">
+            <VBox alignment="TOP_CENTER" spacing="10.0">
+               <Label text="Liste de courses" />
+               <ScrollPane fx:id="ingredientsListScrollpane" minHeight="650.0" minWidth="600.0" stylesheets="@../css/style.css">
+                  <VBox fx:id="vbox" alignment="CENTER" />
+               </ScrollPane>
+            </VBox>
+            <VBox alignment="TOP_CENTER" spacing="10.0">
+               <Label text="Ingrédients disponibles" />
+               <TableView fx:id="tableView" minHeight="500.0" minWidth="600.0" onMouseClicked="#ingredientOnClicked">
+                  <columns>
+                     <TableColumn fx:id="ingredientNameColumn" editable="false" maxWidth="300.0" minWidth="100.0" prefWidth="290.0" text="Nom" />
+                     <TableColumn fx:id="ingredientTypeColumn" editable="false" maxWidth="300.0" minWidth="100.0" prefWidth="290.0" text="Type" />
+                  </columns>
+               </TableView>
+               <VBox alignment="CENTER" spacing="10.0">
+                  <padding>
+                     <Insets top="25.0" />
+                  </padding>
+                  <TextField fx:id="search" maxHeight="24.0" maxWidth="150.0" promptText="Recherche" />
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <TextField fx:id="ingredientName" promptText="Nouveau produit" />
+                     <ComboBox fx:id="ingredientType" prefWidth="150.0" promptText="Rayon" />
+                     <ComboBox fx:id="ingredientUnit" prefWidth="150.0" promptText="Unité" />
+                     <Button fx:id="addIngredientButton" mnemonicParsing="false" onAction="#addIngredientButtonOnClicked" stylesheets="@../css/style.css" text="Ajouter un ingrédient" />
+                  </HBox>
+               </VBox>
+            </VBox>
+         </HBox>
+      </VBox>
+   </center>
+</BorderPane>

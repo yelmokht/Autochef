@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" styleClass="background" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ulb.infof307.g02.gui.view.shoppinglist.ShoppingListInfoViewerController">
+   <Label fx:id="shoppingName" layoutX="22.0" layoutY="31.0" text="Nom de la liste de course">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Label>
+   <Button fx:id="backButton" layoutX="22.0" layoutY="726.0" mnemonicParsing="false" onAction="#backButtonOnClicked" stylesheets="@../css/style.css" text="Retour" />
+   <VBox alignment="CENTER" layoutX="22.0" layoutY="97.0" spacing="10.0">
+      <Label text="List des ingrédients :" />
+      <ScrollPane fx:id="scrollpane" prefHeight="589.0" prefWidth="400.0" stylesheets="@../css/style.css">
+         <VBox fx:id="ingredientBox" spacing="10.0" />
+      </ScrollPane>
+   </VBox>
+   <VBox layoutX="494.0" layoutY="97.0" prefHeight="615.0" prefWidth="726.0">
+      <children>
+         <Label text="Magasins disponibles :">
+            <VBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </VBox.margin>
+         </Label>
+         <ScrollPane hbarPolicy="NEVER" vbarPolicy="NEVER" VBox.vgrow="SOMETIMES">
+            <content>
+               <VBox fx:id="storeBox" prefHeight="590.0" prefWidth="725.0" />
+            </content>
+         </ScrollPane>
+      </children>
+   </VBox>
+</AnchorPane>

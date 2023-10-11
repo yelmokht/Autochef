@@ -1,0 +1,26 @@
+.background{
+    -fx-background-image: url("/ulb/infof307/g02/gui/image/background.png");
+    -fx-background-size: 100% 100%;
+}
+
+.scroll-pane{
+    -fx-background: #ffffff;
+    -fx-border-color: #ffffff;
+}
+
+.hbox{
+    -fx-background-color: #ffffff;
+}
+
+.button {
+    -fx-background-color: #ecf0f1;
+    -fx-background-radius: 7px;
+    -fx-effect: dropshadow(one-pass-box, #707273, 5, 1, 0, 1.5);
+}
+
+
+.button:hover{
+    -fx-background-color: #BFBFBF;
+    -fx-background-radius: 7px;
+    -fx-effect: dropshadow(one-pass-box, #707273, 2, 1, 0, 0.5);
+}

@@ -1,0 +1,97 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "ingredient" (
+	"id"	INTEGER NOT NULL UNIQUE,
+	"name"	TEXT NOT NULL UNIQUE,
+	"type"	TEXT NOT NULL, unit TEXT,
+	PRIMARY KEY("id")
+);
+CREATE TABLE IF NOT EXISTS "user"
+(
+    id       integer not null
+        constraint user_pk
+            primary key,
+    name     text    not null,
+    email    text    not null,
+    password text    not null
+);
+CREATE TABLE IF NOT EXISTS "recipe"
+(
+    id           INTEGER not null
+        primary key,
+    id_user      integer not null
+        references user,
+    name         TEXT    not null,
+    servings     INTEGER not null,
+    type         TEXT    not null,
+    diet         TEXT    not null,
+    instructions TEXT
+);
+CREATE TABLE IF NOT EXISTS "recipe_schedule"
+(
+    id        integer not null
+        constraint recipe_schedule_pk_1
+            primary key,
+    id_user   integer not null
+        constraint recipe_schedule_user_id_fk
+            references user,
+    id_recipe integer not null
+        references recipe,
+    date      text    not null,
+    time      text    not null,
+    constraint recipe_schedule_pk_2
+        unique (id_user, id_recipe, date, time)
+);
+CREATE TABLE IF NOT EXISTS "shopping_list"
+(
+    id      integer not null
+        constraint shopping_list_pk
+            primary key,
+    id_user integer not null
+        constraint shopping_list_user_id_fk
+            references user,
+    name    text    not null
+);
+CREATE TABLE IF NOT EXISTS "ingredient_recipe"
+(
+    id_recipe     INTEGER not null
+        references recipe,
+    id_ingredient INTEGER not null
+        references ingredient,
+    quantity      REAL    not null,
+    constraint ingredient_recipe_pk
+        primary key (id_recipe, id_ingredient)
+);
+CREATE TABLE IF NOT EXISTS "ingredient_list"
+(
+    id_shopping   integer not null
+        references shopping_list,
+    id_ingredient integer not null
+        references ingredient,
+    quantity      double  not null,
+    constraint ingredient_list_pk
+        primary key (id_shopping, id_ingredient)
+);
+CREATE TABLE IF NOT EXISTS "store" (
+	"id"	INTEGER NOT NULL,
+	"name"	TEXT NOT NULL UNIQUE,
+	PRIMARY KEY("id")
+);
+CREATE TABLE IF NOT EXISTS "ingredient_store"
+(
+    id_store      INTEGER not null
+        references store,
+    id_ingredient INTEGER not null
+        references ingredient,
+    price         REAL    not null,
+    primary key (id_store, id_ingredient)
+);
+CREATE UNIQUE INDEX user_id_uindex
+    on user (id);
+CREATE UNIQUE INDEX user_username_uindex
+    on user (name);
+CREATE UNIQUE INDEX recipe_id_user_name_uindex
+    on recipe (id_user, name);
+CREATE UNIQUE INDEX shopping_list_id_user_name_uindex
+    on shopping_list (id_user, name);
+COMMIT;

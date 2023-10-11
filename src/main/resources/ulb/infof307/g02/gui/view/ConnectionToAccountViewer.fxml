@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" styleClass="background" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ulb.infof307.g02.gui.view.login.ConnectionToAccountViewerController">
+   <center>
+      <VBox alignment="CENTER" maxWidth="-Infinity" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Connexion">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <VBox spacing="3.0">
+               <children>
+                  <Label text="Nom d'utilisateur:" />
+                  <TextField fx:id="userTextField" />
+                  <Label fx:id="usernameWarning" prefHeight="17.0" prefWidth="360.0" textFill="RED" />
+               </children>
+            </VBox>
+            <VBox spacing="3.0">
+               <children>
+                  <Label text="Mot de passe:" />
+                  <PasswordField fx:id="passwordTextField" />
+                  <Label fx:id="passwordWarning" prefHeight="17.0" prefWidth="360.0" textFill="RED" />
+               </children>
+            </VBox>
+            <Button fx:id="loginButton" disable="true" mnemonicParsing="false" onAction="#loginButtonOnClicked" text="Se connecter" />
+            <Button fx:id="PassButton" mnemonicParsing="false" onAction="#passButtonOnClicked" text="Pass" />
+            <HBox alignment="CENTER" prefHeight="22.0" prefWidth="362.0">
+               <children>
+                  <Hyperlink fx:id="createAccountHyperlink" alignment="CENTER" onAction="#createAccountOnClicked" prefHeight="22.0" prefWidth="121.0" text="Pas de compte ?" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

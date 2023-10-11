@@ -1,0 +1,34 @@
+{
+  "name":"Pain",
+  "servings":2,
+  "type":"DISH",
+  "diet":"VEGAN",
+  "ingredients":
+    [
+      {
+        "name":"flour",
+        "quantity":200.0,
+        "unit":"GRAM"},
+      {
+        "name":"water",
+        "quantity":175.0,
+        "unit":"GRAM"},
+      {
+        "name":"salt",
+        "quantity":10.0,
+        "unit":"GRAM"},
+      {
+        "name":"freshYeast",
+        "quantity":1.0,
+        "unit":"GRAM"}
+    ],
+  "instructions":
+  [
+    "Mix the YEAST and the WATER",
+    "Mix the SALT and the FLOUR",
+    "Mix the wet and the dry ingredients",
+    "Knead on a worksurface until the dough is smooth",
+    "Split the dough in equal pieces",
+    "Cook a 220C for 10 to 15min or until golden brown"
+  ]
+}
